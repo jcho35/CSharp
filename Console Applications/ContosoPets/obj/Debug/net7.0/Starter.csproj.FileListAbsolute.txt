@@ -1,0 +1,15 @@
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\bin\Debug\net7.0\Starter.exe
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\bin\Debug\net7.0\Starter.deps.json
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\bin\Debug\net7.0\Starter.runtimeconfig.json
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\bin\Debug\net7.0\Starter.dll
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\bin\Debug\net7.0\Starter.pdb
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\Starter.csproj.AssemblyReference.cache
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\Starter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\Starter.AssemblyInfoInputs.cache
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\Starter.AssemblyInfo.cs
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\Starter.csproj.CoreCompileInputs.cache
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\Starter.dll
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\refint\Starter.dll
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\Starter.pdb
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\Starter.genruntimeconfig.cache
+C:\Users\Matteo\Desktop\CsharpProjects\ContosoPets\Starter\obj\Debug\net7.0\ref\Starter.dll
