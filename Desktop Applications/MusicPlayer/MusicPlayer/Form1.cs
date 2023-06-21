@@ -33,6 +33,8 @@ namespace MusicPlayer
         //Not using default constructor because Event allows to stop music and not create multiple instances
         IWavePlayer waveOutDevice = new WaveOutEvent();
         AudioFileReader audioFileReader;
+        private bool randomOrder = false;
+        private int previousSong = -1;
 
         #endregion
 
@@ -62,6 +64,61 @@ namespace MusicPlayer
                     //waveOutDevice.Dispose();
                 }
             }
+        }
+
+        private void continue_Play(object sender, EventArgs e)
+        {
+            if (audioFileReader.TotalTime.TotalSeconds - audioFileReader.CurrentTime.TotalSeconds < 1 ) 
+                next_Click(sender, e);
+        }
+
+        private void next_Click(object sender, EventArgs e)
+        {
+            if (songsList.SelectedItem != null)
+            {
+                var newSongIndex = songsList.SelectedIndex + 1;
+
+                if (randomOrder)
+                {
+                    var randomRange = new Random();
+                    newSongIndex = randomRange.Next(1, songsList.Items.Count);
+
+                    while (newSongIndex == songsList.SelectedIndex)
+                    {
+                        newSongIndex = randomRange.Next();
+                    }
+                }
+
+                previousSong = songsList.SelectedIndex; //save previous song to keep order while random
+
+                songsList.SelectedIndex = newSongIndex;
+                audioFileReader = new AudioFileReader(songsList.SelectedItem.ToString());
+
+                waveOutDevice.Play();
+            }
+        }
+
+        private void previous_Click(object sender, EventArgs e)
+        {
+            if (songsList.SelectedItem != null)
+            {
+                songsList.SelectedIndex = previousSong == -1 ? songsList.SelectedIndex - 1 : previousSong;
+                audioFileReader = new AudioFileReader(songsList.SelectedItem.ToString());
+
+                waveOutDevice.Play();
+            }
+        }
+
+        /// <summary>
+        /// Random order button click
+        /// Switches control variable and changes background color in the UI to show random active/disact.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void random_Click(object sender, EventArgs e)
+        {
+            randomOrder = !randomOrder;
+            random.BackColor = !randomOrder ? Color.Empty : Color.LightGreen;
         }
 
         private void song_Changed(object sender, EventArgs e)
